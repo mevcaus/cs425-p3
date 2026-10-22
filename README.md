@@ -97,5 +97,6 @@ address and exits 1, since the spec says a malformed address wins when a run hit
 one error. A malformed address prints an error to stderr, an address with no route
 prints `<address> unreachable`, and the exit code is 1 if any address was malformed,
 otherwise 3 if any was unreachable, otherwise 0. Running it with no arguments prints the
-usage to stdout and exits 0, and any other bad command line prints the usage to stderr and
-exits 1.
+usage to stdout and exits 0. An unknown command or the wrong number of arguments prints the
+usage to stderr and exits 1, and a malformed argument (like `info 1.2.3.4`) prints an error
+saying what was wrong and exits 1.
